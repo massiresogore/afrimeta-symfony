@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Reseau social pour developpeur">
+        <meta name="author" content="Massire Sogore">
+         <link rel="stylesheet" href="">
+        <title>{% block title %} | Afrimeta {% endblock %}</title>
+    </head>
+    <body>
+    <nav id="nav">
+        <div class="logo-block">
+            <a href="/"><img class="nav_logo" src="" alt="logo-afrimeta"></a>
+        </div>
+        <div class="nav__block">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="/" class="nav__link">Accueil </a></li>
+                <li> <a class="nav__link" href="/register" class="nav__link">Register </a> </li>
+                <li class="nav__item"><a href="/login" class="nav__link">Connexion </a></li>
+                <li class="nav__item"><a class="nav__link" href="/about" class="nav__link">A propos </a></li> 
+            </ul>
+        </div>
+    </nav>
+
+        {% block body %}{% endblock %}
+
+         <footer class="footer">
+            &copy;Copyright - {{ 'now' | date('Y')}} &middot; Build 🪴 by Sogore Massire
+         </footer>
+    </body>
+</html>
