@@ -2,9 +2,11 @@
 
 {% block title %}Register {{parent()}}{% endblock %}
 
-{% block body %}
+ {% block header %}
+        <h1>Register Page</h1>
+  {% endblock header %}
+{% block article %}
 
-<main id="main-register">
     <div class="book">
         <h2 class="form__title">Devenir Membre !!!</h2>
 
@@ -42,6 +44,4 @@
 
         </form>
     </div>
-</main>
-
-{% endblock %}
+{% endblock article %}

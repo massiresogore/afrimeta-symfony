@@ -1,7 +1,9 @@
 {% extends 'base.html.twig'%}
 
 {% block title%}About {{ parent() }} {% endblock %}
-
-{% block body %} 
-    <h1>Massire est un étudiant Congolais venu en france en 2020 ...</h1>
-{% endblock %}
+ {% block header %}
+        <h1>About Page</h1>
+  {% endblock header %}
+{% block article %} 
+    <h1>Massire est un étudiant Congolais venu en france en Décembre 2020 ...</h1>
+{% endblock article %}

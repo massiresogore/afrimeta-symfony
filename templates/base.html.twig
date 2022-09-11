@@ -7,28 +7,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Reseau social pour developpeur">
         <meta name="author" content="Massire Sogore">
-         <link rel="stylesheet" href="">
+         <link rel="stylesheet" href="css/style.css">
         <title>{% block title %} | Afrimeta {% endblock %}</title>
+    
     </head>
     <body>
-    <nav id="nav">
-        <div class="logo-block">
-            <a href="/"><img class="nav_logo" src="" alt="logo-afrimeta"></a>
-        </div>
-        <div class="nav__block">
-            <ul class="nav__list">
-                <li class="nav__item"><a class="nav__link" href="/" class="nav__link">Accueil </a></li>
-                <li> <a class="nav__link" href="/register" class="nav__link">Register </a> </li>
-                <li class="nav__item"><a href="/login" class="nav__link">Connexion </a></li>
-                <li class="nav__item"><a class="nav__link" href="/about" class="nav__link">A propos </a></li> 
-            </ul>
-        </div>
-    </nav>
-
-        {% block body %}{% endblock %}
-
-         <footer class="footer">
-            &copy;Copyright - {{ 'now' | date('Y')}} &middot; Build 🪴 by Sogore Massire
-         </footer>
+        <main class="afrimeta-block">
+            <nav class="afrimeta-nav">
+                <div class="block-logo">
+                    <a href="/"><img class="nav_logo" src="" alt="afrimeta-logo"></a>
+                </div>
+                <div class="nav-list-block">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a class="nav__link" href="/" class="nav__link">Accueil </a></li>
+                        <li> <a class="nav__link" href="/register" class="nav__link">Register </a> </li>
+                        <li class="nav__item"><a href="/login" class="nav__link">Connexion </a></li>
+                        <li class="nav__item"><a class="nav__link" href="/about" class="nav__link">A propos </a></li>
+                    </ul>
+                </div>
+            </nav>
+            <section class="afrimeta-section-block">
+                <header class="afrimeta-header">{% block header %}{% endblock header %}</header>
+                <article class="afrimeta-article">{% block article %}{% endblock article %}</article>
+            </section>
+            <footer class="afrimeta-footer">
+           <p> &copy;Copyright - {{ 'now' | date('Y')}} &middot; Build 🪴 by Sogore Massire</p>
+            </footer>
+        </main>
     </body>
 </html>
